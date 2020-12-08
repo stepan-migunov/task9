@@ -19,7 +19,7 @@ int lcf(int a, int b)
 void swap_i(int* alpha, int* beta)
 {
     int temp = *alpha;
-    *alpha = *beta;
+    *alpha = *beta,
     *beta = temp;
 }
 void diagonalise_up(int height, int width, int matrix[height][width])
@@ -105,10 +105,9 @@ void subtask5()
     int N; scanf("%d",&N);
     int matrix[N][N+1];
     for(int i = 0; i < N; ++i)
-    {
         for (int j = 0; j < N+1; ++j)
             scanf("%d", &matrix[i][j]);
-    }
+    
     diagonalise_up(N, N + 1, matrix);
 
     printf("\n************\n\n");
