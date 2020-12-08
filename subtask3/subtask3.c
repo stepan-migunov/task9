@@ -11,8 +11,8 @@ extern int abs_i(int alpha);
 #pragma ide diagnostic ignored "cert-err34-c"
 void subtask3()
 {
-    int array[9][9];
-    int sum = 0;
+    int array[9][9],
+        sum = 0;
     for(int i = 0; i < 9; ++i)
         for (int j = 0; j < 9; ++j)
             array[i][j]=1;//scanf("%d",&array[i][j]);
