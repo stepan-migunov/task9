@@ -21,18 +21,17 @@ void subtask4()
     for(int i = 0; i < N; ++i)
         sums[i]=0;
 
-
     for(int i = 0; i < N; ++i)
         for(int j = 0; j < M; ++j)
-            sums[i]+=matrix[j][i],sums_index[i]=i;
+            sums[i]+=matrix[j][i],
+            sums_index[i]=i;
 
     for(int i = 0; i < N; ++i)
         for(int j = 0; j < N-i-1; ++j)
             if(sums[j]>sums[j+1])
-            {
-                swap_i(sums+j,sums+j+1);
+                swap_i(sums+j,sums+j+1),
                 swap_i(sums_index+j,sums_index+j+1);
-            }
+        
     for(int i = 0; i < N; ++i)
         for(int j = 0; j < N-1-i;++j)
             if(sums_index[j]>sums_index[j+1])
