@@ -18,14 +18,12 @@ void subtask6()
     for(int i = 0; i < N; ++i)
     {
         for (int j = 0; j < N; ++j)
-        {
-            scanf("%d", &matrix[i][j]);
-            doubledMatrix[i][N + j]=(i == j);
+            scanf("%d", &matrix[i][j]),
+            doubledMatrix[i][N + j]=(i == j),
             doubledMatrix[i][j] = matrix[i][j];
-        }
     }
-    diagonalise_up(N, 2*N, doubledMatrix);
-    diagonalise_down(N,2*N, doubledMatrix);
+    diagonalise_up(N, 2*N, doubledMatrix),
+    diagonalise_down(N,2*N, doubledMatrix),
 
     printf("\n****** xirtam ******\n\n");
 
